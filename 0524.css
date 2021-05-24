@@ -1,0 +1,61 @@
+@charset "utf-8" ;
+body {
+    display: flex;
+}
+.wrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: static;
+    display: flex;
+}
+.wrap_1, .wrap_2 {
+    width: 500px;
+    height: 100%;
+    margin: 0 10px;
+    background-color: antiquewhite;
+}
+.pic1, .pic2 {
+    position: relative;
+}
+.pic1 > div, .pic2 > div {
+    position: absolute;
+    top: 0;
+}
+.pic1 > div:nth-child(1) {
+    z-index: 2;
+}
+.pic2 > div:nth-of-type(1) {
+    z-index: 2;
+}
+.btn1, .btn2 {
+    z-index: 999;
+    height: 150px;
+    position: absolute;
+}
+.btn1 {
+    top: 530px;
+}
+.btn2 {
+    top: 365px;
+}
+label {
+    margin-left:10px;
+    margin-top:10px;
+    display: block;
+    width: 100px;
+    height: 50px;
+    border: 1px solid white;
+    background-color: lightsalmon;
+    line-height: 50px;
+    text-align: center;
+}
+#btn1:checked ~ .pic1 > .img2 {
+    z-index: 99;
+}
+
+#btn3:checked ~ .pic2 > .img4 {
+    z-index: 99;
+}
+input[type=radio] {
+    display: none;
+}
